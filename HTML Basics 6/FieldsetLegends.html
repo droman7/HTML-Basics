@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Forms</title>
+  </head>
+  <body>
+    <h1>Other Form Controls</h1>
+    <h2>Text Areas</h2>
+    <form action="">
+      <label for="notes">Additional Notes:</label>
+      <textarea rows="10" cols="50" id="notes"></textarea>
+      <!-- rows and cols adjust the text area box -->
+    </form>
+
+    <h2>Checkbox</h2>
+    <form action="">
+      <input type="text" placeholder="username" />
+      <div>
+        <label for="subscribe">Subscribe to our Newletter?</label>
+        <input type="checkbox" id="subscribe" name="subscribe" checked />
+        <!-- adding the checked booleon makes the checkbox already checked to begin with -->
+      </div>
+      <button>Submit</button>
+      <!-- When checkbox is checked, http://127.0.0.1:3000/Checkbox.html?subscribe=on  we get the subscribe=on -->
+      <!--  When checbkbox is not checked, http://127.0.0.1:3000/Checkbox.html? subscibe is not shown -->
+    </form>
+
+    <h2>Range Input</h2>
+    <form action="">
+      <label for="volume">Set Volume</label>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        id="volume"
+        name="volume"
+        value="75"
+        step="5"
+      />
+      <!-- Value sets the volume to a set number when webpage is open. Step allows the volume to be adjusted by 5 increments. -->
+      <button>Submit</button>
+      <!-- http://127.0.0.1:3000/RangeSlider.html?volume=50, volume is set as 50 from where it was at in the slider -->
+    </form>
+    <h2>Select</h2>
+    <form action="">
+      <label for="skill-level">Select your Skill Level:</label>
+      <select name="skill-level" id="skill-level">
+        <option value="1">Beginner</option>
+        <option value="2" selected>Intermediate</option>
+        <option value="3">Expert</option>
+      </select>
+      <!-- Value allows for only the data added to it to be sent to the server rather than the whole option data. Selected boolean allows for an option to be preset when the page is open. -->
+      <button>Submit</button>
+    </form>
+    <h2>Radio Buttons</h2>
+    <form action="">
+      <fieldset>
+        <legend>Pick your shirt size:</legend>
+        <div>
+          <input type="radio" id="small" name="size" value="s" />
+          <label for="small">Small</label>
+        </div>
+        <div>
+          <input type="radio" id="medium" name="size" value="m" />
+          <label for="medium">Medium</label>
+        </div>
+        <div>
+          <input type="radio" id="large" name="size" value="l" />
+          <label for="large">Large</label>
+        </div>
+        <!-- Having the same name attribute allows for only one radio input to be selected, otherwise all can be selected -->
+        <!-- value attribute send data to the server in a form we can see: http://127.0.0.1:3000/Radio.html?size=m -->
+      </fieldset>
+      <!-- fieldset creates a border around your radio. Legend allows you to add a caption. Fieldset can be disabled to disable entire radio -->
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>

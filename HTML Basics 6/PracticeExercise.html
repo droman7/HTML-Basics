@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <form action="">
+      <label for="card">Payment Method</label>
+      <select name="card" id="card">
+        <option value="Card_1">American Express Ending in 1099</option>
+        <option value="Card_2">Visa ending in 2054</option>
+        <option value="Card_3">Discover ending in 8502</option>
+      </select>
+      <fieldset>
+        <legend>Shipping Method</legend>
+        <div>
+          <input type="radio" id="two_day" name="shipping" value="two" />
+          <label for="two_day">FREE - Two Day Shipping</label>
+        </div>
+        <div>
+          <input type="radio" id="standard" name="shipping" value="standard" />
+          <label for="standard"
+            >FREE - Standard Shipping (4-5 Business Days)</label
+          >
+        </div>
+        <div>
+          <input type="radio" id="no_rush" name="shipping" value="no_rush" />
+          <label for="no_rush">FREE - No Rush Shipping (5 Business Days)</label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="gift">This is a gift</label>
+        <input type="checkbox" id="gift" name="gift" />
+      </div>
+      <button>Place your order</button>
+    </form>
+  </body>
+</html>

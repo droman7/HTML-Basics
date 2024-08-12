@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Forms</title>
+  </head>
+  <body>
+    <h1>Other Form Controls</h1>
+    <h2>Text Areas</h2>
+    <form action="">
+      <label for="notes">Additional Notes:</label>
+      <textarea rows="10" cols="50" id="notes"></textarea>
+      <!-- rows and cols adjust the text area box -->
+    </form>
+
+    <h2>Checkbox</h2>
+    <form action="">
+      <input type="text" placeholder="username" />
+      <div>
+        <label for="subscribe">Subscribe to our Newletter?</label>
+        <input type="checkbox" id="subscribe" name="subscribe" checked />
+        <!-- adding the checked booleon makes the checkbox already checked to begin with -->
+      </div>
+      <button>Submit</button>
+      <!-- When checkbox is checked, http://127.0.0.1:3000/Checkbox.html?subscribe=on  we get the subscribe=on -->
+      <!--  When checbkbox is not checked, http://127.0.0.1:3000/Checkbox.html? subscibe is not shown -->
+    </form>
+  </body>
+</html>
